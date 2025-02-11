@@ -1,5 +1,9 @@
 /*
  * Tutorial 4 Jeopardy Project for SOFE 3950U: Operating Systems
+ *
+ * Copyright (C) 2015, <GROUP MEMBERS>
+ * All rights reserved.
+ *
  */
 #include <stdio.h>
 #include <stdlib.h>
