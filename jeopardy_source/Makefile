@@ -1,19 +1,20 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -std=c99
+CFLAGS = -Wall -Wextra -std=c99 -g
 LFLAGS = 
 LIBS = 
 SOURCES = jeopardy.c questions.c players.c
-OBJECTS = $(subst .c,.o,$(SOURCES))
+OBJECTS = $(SOURCES:.c=.o)
 EXE = jeopardy.exe
-.PHONY: clean help
 
-jeopardy.exe : jeopardy.o questions.o players.o
-	$(CC) $(CFLAGS) $^ $(LIBS) -o $@ 
+.PHONY: all clean cleanup help
 
-%.o : %.c
-	$(CC) $(CFLAGS) -c $< 
+all: $(EXE)
 
-all : $(EXE)
+$(EXE): $(OBJECTS)
+	$(CC) $(CFLAGS) $^ $(LIBS) -o $@
+
+%.o: %.c %.h
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJECTS) $(EXE) *~
@@ -25,3 +26,4 @@ help:
 	@echo "Valid targets:"
 	@echo "  all:    generates all binary files"
 	@echo "  clean:  removes .o and .exe files"
+	@echo "  cleanup: removes .o files only"
