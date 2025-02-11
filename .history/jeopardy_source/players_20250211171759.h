@@ -1,5 +1,9 @@
 /*
  * Tutorial 4 Jeopardy Project for SOFE 3950U: Operating Systems
+ *
+ * , <GROUP MEMBERS>
+ * All rights reserved.
+ *
  */
 #ifndef PLAYERS_H_
 #define PLAYERS_H_
