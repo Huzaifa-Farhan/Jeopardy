@@ -120,15 +120,15 @@ int main(int argc, char *argv[])
         tokenize(buffer, tokens);
 
         // Check if answer is correct
-        if (valid_answer(category, value, answer)) {
-            
+        // Check if answer is correct
+        if (valid_answer(category, value, tokens[2])) // Assuming tokens[2] contains the answer
+        {
             printf("Correct!\n");
-            update_score(players, players[current_player].name, value);
-            
-        } else {
-            
-            printf("Incorrect. The correct answer was: %s\n", get_correct_answer(category, value));
-            
+            update_score(players, NUM_PLAYERS, buffer, value);
+        }
+        else
+        {
+            printf("Incorrect! The correct answer was: %s\n", (char*)get_correct_answer(category, value));
         }
 
         // Check if all questions have been answered
