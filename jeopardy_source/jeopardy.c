@@ -138,6 +138,11 @@ while (1)
         printf("Incorrect! The correct answer was: %s\n", get_correct_answer(category, value));
     }
 
+
+printf("\nPlayer Scores:\n");
+    for (int i = 0; i < NUM_PLAYERS; i++) {
+    printf("Player: %s, Score: %d\n", players[i].name, players[i].score);
+}
     // Check if all questions have been answered
     if (all_questions_answered())
     {
