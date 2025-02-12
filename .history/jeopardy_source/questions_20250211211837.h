@@ -52,7 +52,7 @@ extern bool valid_answer(char *category, int value, char *answer);
 extern bool already_answered(char *category, int value);
 
 // Returns the correct answer for the question
-extern char* get_correct_answer(char *category, int value);
+extern char get_correct_answer(char *category, int value);
 
 // Returns if all questions have been answered or not
 extern bool all_questions_answered(void);

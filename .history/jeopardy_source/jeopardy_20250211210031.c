@@ -99,7 +99,7 @@ int main(int argc, char *argv[])
         }
         else
         {
-            printf("Incorrect! The correct answer was: %s\n", (char*)get_correct_answer(category, value));
+            printf("Incorrect! The correct answer was: %s\n", get_correct_answer(category, value));
         }
 
         // Check if all questions have been answered
