@@ -33,24 +33,12 @@ void tokenize(char *input, char **tokens) {
 
     tokens[index] = NULL;  // End the array of tokens with NULL
 }
-
-
-void show_results(player *players, int num_players) {
-    printf("\nGame Over!\n");
-    printf("Final Results:\n");
-
-    for (int i = 0; i < num_players; i++) {
-        printf("Player: %s | Score: %d\n", players[i].name, players[i].score);
-    }
-}
+void show_results(player *players, int num_players);
 
 question questions[NUM_QUESTIONS]; 
 
 int main(int argc, char *argv[])
 {
-    (void)argc;
-    (void)argv;
-    
     // Array of players
     player players[NUM_PLAYERS];
 

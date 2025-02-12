@@ -48,9 +48,6 @@ question questions[NUM_QUESTIONS];
 
 int main(int argc, char *argv[])
 {
-    (void)argc;
-    (void)argv;
-    
     // Array of players
     player players[NUM_PLAYERS];
 

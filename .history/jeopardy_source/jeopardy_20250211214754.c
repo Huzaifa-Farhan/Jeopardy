@@ -35,6 +35,8 @@ void tokenize(char *input, char **tokens) {
 }
 
 
+#include <stdio.h>
+
 void show_results(player *players, int num_players) {
     printf("\nGame Over!\n");
     printf("Final Results:\n");
@@ -48,9 +50,6 @@ question questions[NUM_QUESTIONS];
 
 int main(int argc, char *argv[])
 {
-    (void)argc;
-    (void)argv;
-    
     // Array of players
     player players[NUM_PLAYERS];
 

@@ -18,39 +18,13 @@
 #define NUM_PLAYERS 4
 
 // Function prototypes
-void tokenize(char *input, char **tokens) {
-    const char *delimiters = " ?";  // Tokenize by spaces and question mark
-    int index = 0;
+void tokenize(char *input, char **tokens);
+void show_results(player *players, int num_players);
 
-    // Get the first token
-    char *token = strtok(input, delimiters);
-
-    // Loop through the string to extract all tokens
-    while (token != NULL) {
-        tokens[index++] = token;
-        token = strtok(NULL, delimiters);
-    }
-
-    tokens[index] = NULL;  // End the array of tokens with NULL
-}
-
-
-void show_results(player *players, int num_players) {
-    printf("\nGame Over!\n");
-    printf("Final Results:\n");
-
-    for (int i = 0; i < num_players; i++) {
-        printf("Player: %s | Score: %d\n", players[i].name, players[i].score);
-    }
-}
-
-question questions[NUM_QUESTIONS]; 
+question questions[NUM; 
 
 int main(int argc, char *argv[])
 {
-    (void)argc;
-    (void)argv;
-    
     // Array of players
     player players[NUM_PLAYERS];
 
