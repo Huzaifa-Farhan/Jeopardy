@@ -34,7 +34,7 @@ typedef struct {
 
 // An array of 12 questions (4 for each category), initialized in initialize_game
 // this may need to be a pointer if you want it set dynamically
-question questions[NUM_QUESTIONS];
+extern question questions[NUM_QUESTIONS];
 
 // Initializes the array of questions for the game
 extern void initialize_game(void);
@@ -51,4 +51,10 @@ extern bool valid_answer(char *category, int value, char *answer);
 // Returns true if the question has already been answered
 extern bool already_answered(char *category, int value);
 
-#endif /* QUESTIONS_H_ */
+// Returns the correct answer for the question
+extern char* get_correct_answer(char *category, int value);
+
+// Returns if all questions have been answered or not
+extern bool all_questions_answered(void);
+
+#endif // QUESTIONS_H
