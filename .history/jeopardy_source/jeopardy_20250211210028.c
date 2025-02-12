@@ -96,6 +96,7 @@ int main(int argc, char *argv[])
         {
             printf("Correct!\n");
             update_score(players, NUM_PLAYERS, buffer, value);
+            player *players, int num_players, char *name, int score
         }
         else
         {

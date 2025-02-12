@@ -51,10 +51,10 @@ extern bool valid_answer(char *category, int value, char *answer);
 // Returns true if the question has already been answered
 extern bool already_answered(char *category, int value);
 
-// Returns the correct answer for the question
+/// @brief  
+/// @param category 
+/// @param value 
+/// @return 
 extern char get_correct_answer(char *category, int value);
 
-// Returns if all questions have been answered or not
-extern bool all_questions_answered(void);
-
-#endif // QUESTIONS_H
+#endif /* QUESTIONS_H_ */

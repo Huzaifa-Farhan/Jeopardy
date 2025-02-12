@@ -23,6 +23,6 @@ extern void show_results(player *players, int num_players);
 extern bool player_exists(player *players, int num_players, char *name);
 
 // Updates the score of a player if they answer correctly.
-extern void update_score(player *players, int num_players, char *name, int score);
+extern void update_score(player *players, char *name, int score);
 
 #endif /* JEOPARDY_H_ */

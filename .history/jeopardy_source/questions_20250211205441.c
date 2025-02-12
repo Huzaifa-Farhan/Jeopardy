@@ -154,24 +154,3 @@ bool already_answered(char *category, int value)
     }
     return false;
 }
-
-
-// Function to get the correct answer for a question
-char* get_correct_answer(char *category, int value) {
-    for (int i = 0; i < NUM_QUESTIONS; i++) {
-        if (strcmp(questions[i].category, category) == 0 && questions[i].value == value) {
-            return questions[i].answer;
-        }
-    }
-    return "Unknown"; // Return a default value if no match is found
-}
-
-// Function to check if all questions have been answered
-bool all_questions_answered() {
-    for (int i = 0; i < NUM_QUESTIONS; i++) {
-        if (!questions[i].answered) {
-            return false; // Found an unanswered question
-        }
-    }
-    return true; // All questions have been answered
-}

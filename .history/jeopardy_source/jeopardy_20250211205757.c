@@ -95,7 +95,7 @@ int main(int argc, char *argv[])
         if (valid_answer(category, value, tokens[2])) // Assuming tokens[2] contains the answer
         {
             printf("Correct!\n");
-            update_score(players, NUM_PLAYERS, buffer, value);
+            update_score(players, buffer, value);
         }
         else
         {
