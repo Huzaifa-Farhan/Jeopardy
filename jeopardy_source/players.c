@@ -28,13 +28,15 @@ bool player_exists(player *players, int num_players, char *name)
 // player given their name
 void update_score(player *players, int num_players, char *name, int score)
 {
+
+
     
     for (int i = 0; i < num_players; i++){
 
         if (strcmp(players[i].name, name) == 0) {
 
             // Update score when player found
-            players[i].score = score;
+            players[i].score = players[i].score + score;
         }
 
     }
